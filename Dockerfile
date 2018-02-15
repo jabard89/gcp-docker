@@ -40,8 +40,8 @@ RUN useradd -m -s /bin/bash -N -u $UID $USER && \
 
 USER $USER
 
-VOLUME /data
+VOLUME /globusdata
 
 # Add GCP to PATH
 ENV PATH /opt/globusconnectpersonal/:$PATH
-CMD /opt/globusconnectpersonal/start-globus-connect.sh $SETUP_KEY /data
+CMD /opt/globusconnectpersonal/start-globus-connect.sh $SETUP_KEY /globusdata

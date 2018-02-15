@@ -14,13 +14,13 @@ It also mounts a volume where the endpoint serves it's path from.
 2. Obtain a setup key by visiting: [https://www.globus.org/app/endpoints/create-gcp](https://www.globus.org/app/endpoints/create-gcp)
 3. Start up the service with the following docker command:
 ```bash
-docker run --rm -v ./mydata:/data -it -e SETUP_KEY="<<<KEY>>>" gcp-docker
+docker run --rm -v ./mydata:/globusdata -it -e SETUP_KEY="<<<KEY>>>" gcp-docker
 ```
 (where you can put the path to the directory on your computer in place of
 `./mydata` and the key you obtained from globus instead of `<<<KEY>>>`)
 
 This will launch the server and register the endpoint with globus.
- 
+
 ### Running GCP client on Synology NAS:
 
 1) Install the Docker app on the Synology drive
